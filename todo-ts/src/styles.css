@@ -1,0 +1,9 @@
+.container {
+    padding: 40px;
+    margin: auto;
+    width: 50vw;
+}
+.complete {
+    text-decoration: line-through;
+}
+

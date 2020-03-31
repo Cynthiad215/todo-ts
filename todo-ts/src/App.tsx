@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TodoList } from './TodoList';
 import { AddTodoItem } from './AddTodoItem';
+import "./styles.css";
 //import { Todo } from./types'; implicit from types.d.ts file
 
 const initialTodos: Array<Todo> = [
@@ -34,8 +35,11 @@ const App: React.FC = () => {
   
   return (
     <React.Fragment>
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
-      <AddTodoItem addTodo={addTodo} />
+      <div className="container">
+        <h2 className="p-3 border bg-light">To-Do List</h2>
+        <AddTodoItem addTodo={addTodo} />
+        <TodoList todos={todos} toggleTodo={toggleTodo} />
+      </div>
     </React.Fragment>
   );
 }
